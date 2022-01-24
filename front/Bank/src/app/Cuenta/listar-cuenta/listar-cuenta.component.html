@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Accounts</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>CREATION DATE</th>
+                        <th>STATE</th>
+                        <th>ACCOUNT TYPE</th>
+                        <th>AMMOUNT</th>
+                        <th>USER ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr *ngFor="let cuenta of cuentas" class="text-center">
+                        <td>{{cuenta.id}}</td>
+                        <td>{{cuenta.fecha_crea}}</td>
+                        <td>{{cuenta.estado}}</td>
+                        <td>{{cuenta.tipo_cuenta}}</td>
+                        <td>{{cuenta.saldo}}</td>
+                        <td>{{cuenta.id_usuario}}</td>
+                        <td>
+                            <button  class="btn btn-warning">Editar</button>
+                            <button  class="btn btn-danger" style="margin: 10px;">Delete</button>
+                            <button (click)="Operaciones(cuenta.id)" class="btn btn-primary" style="margin: 10px;">Operations</button>
+                            <button (click)="Retirar(cuenta.id) " class="btn btn-dark" style="margin-left: 150px;">Withdraw</button>
+                            <button  class="btn btn-dark" style="margin: 10px;">Consign</button>
+                            <button  class="btn btn-dark" style="margin: 10px;">Transfer</button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button routerLink="" (click)="Ncuenta()" class="btn btn-dark" style="margin: 10px;">Add new account</button>
+    </div>
+</div>

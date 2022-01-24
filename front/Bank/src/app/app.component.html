@@ -1,0 +1,23 @@
+<div>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <!-- <a href="#" class="navbar-brand">BanCarlos</a> -->
+    <h1>
+      Welcome to BanCarlos
+    </h1>
+    <div class="navbar-nav mr-auto">
+      <li (click)="Nuevo()" class="nav-item">
+        <a routerLink="add" class="nav-link" style="margin-left: 30px;" >New User</a>
+      </li>
+      <li (click)="Listar()" class="nav-item">
+        <a routerLink="listar" class="nav-link" style="margin-left: 30px;">Users</a>
+      </li>
+    </div>
+    <span class="navbar-expand">welcome to {{title}}</span>
+  </nav>
+
+  <div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

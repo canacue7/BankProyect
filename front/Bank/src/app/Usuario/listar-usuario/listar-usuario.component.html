@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Usuarios</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ID KIND</th>
+                        <th>IDENTIFICATION</th>
+                        <th>NAME</th>
+                        <th>LAST NAME</th>
+                        <th>EMAIL</th>
+                        <th>BIRTHDAY</th>
+                        <th>CREATION DATE</th>
+                        <th>STATE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr *ngFor="let usuario of usuarios" class="text-center">
+                        <td>{{usuario.id}}</td>
+                        <td>{{usuario.tipoId}}</td>
+                        <td>{{usuario.identificacion}}</td>
+                        <td>{{usuario.name}}</td>
+                        <td>{{usuario.apellido}}</td>
+                        <td>{{usuario.email}}</td>
+                        <td>{{usuario.fecha_nac}}</td>
+                        <td>{{usuario.fecha_crea}}</td>
+                        <td>{{usuario.estado}}</td>
+                        <td>
+                            <button (click)="Editar(usuario.id)" class="btn btn-warning">Edit</button>
+                            <button (click)="Delete(usuario)" class="btn btn-danger" style="margin: 10px;">Delete</button>
+                            <button (click)="Cuentas(usuario.id)" class="btn btn-dark" routerLink="../listarCuentas" style="margin-left: 10 px;">Accounts</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
